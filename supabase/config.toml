@@ -1,0 +1,33 @@
+
+[functions.inventory-agent]
+enabled = true
+verify_jwt = false
+import_map = "./functions/inventory-agent/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/inventory-agent/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/inventory-agent/*.html" ]
+
+[functions.generate-recommendation]
+enabled = true
+verify_jwt = false
+import_map = "./functions/generate-recommendation/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/generate-recommendation/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/generate-recommendation/*.html" ]
+
+[functions.approve-recommendation]
+enabled = true
+verify_jwt = false
+import_map = "./functions/approve-recommendation/deno.json"
+# Uncomment to specify a custom file path to the entrypoint.
+# Supported file extensions are: .ts, .js, .mjs, .jsx, .tsx
+entrypoint = "./functions/approve-recommendation/index.ts"
+# Specifies static files to be bundled with the function. Supports glob patterns.
+# For example, if you want to serve static HTML pages in your function:
+# static_files = [ "./functions/approve-recommendation/*.html" ]

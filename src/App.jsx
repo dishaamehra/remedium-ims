@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { AppLayout } from './components/AppLayout.jsx'
+import AgentActivity from './pages/AgentActivity'
 import { SetupScreen } from './components/SetupScreen.jsx'
 import { Dashboard } from './pages/Dashboard.jsx'
 import { Products } from './pages/Products.jsx'
@@ -9,6 +10,7 @@ import { Orders } from './pages/Orders.jsx'
 import { Clients } from './pages/Clients.jsx'
 import { Tasks } from './pages/Tasks.jsx'
 import { Employees } from './pages/Employees.jsx'
+import PurchaseAssistant from './pages/PurchaseAssistant'
 
 const isConfigured = () => {
   const url = import.meta.env.VITE_SUPABASE_URL
@@ -42,6 +44,8 @@ export default function App() {
         <Route path="/clients" element={<Clients />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/employees" element={<Employees />} />
+        <Route path="/agent" element={<AgentActivity />} />
+        <Route path="/purchase-assistant" element={<PurchaseAssistant />} />
       </Routes>
     </AppLayout>
   )

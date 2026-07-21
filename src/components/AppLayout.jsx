@@ -1,8 +1,9 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import {
   LayoutDashboard, Package, BarChart2, ShoppingCart,
-  Users, CheckSquare, UserCog, Printer, Sun, Moon
+  Users, CheckSquare, UserCog, Printer, Sun, Moon, Bot, ShoppingBag
 } from 'lucide-react'
+
 
 const navItems = [
   { label: 'Dashboard',    path: '/dashboard', icon: LayoutDashboard, section: 'OVERVIEW' },
@@ -12,6 +13,8 @@ const navItems = [
   { label: 'Clients',      path: '/clients',   icon: Users,           section: 'OPERATIONS' },
   { label: 'Tasks',        path: '/tasks',     icon: CheckSquare,     section: 'TEAM' },
   { label: 'Employees',    path: '/employees', icon: UserCog,         section: 'TEAM' },
+  { label: 'AI Agent',     path: '/agent',     icon: Bot,             section: 'AUTOMATION' },
+  { label: 'Purchase Assistant', path: '/purchase-assistant', icon: ShoppingBag, section: 'AUTOMATION' },
 ]
 
 const pageTitles = {
@@ -22,6 +25,8 @@ const pageTitles = {
   '/clients':   'Clients',
   '/tasks':     'Task Tracker',
   '/employees': 'Employees',
+  '/agent':     'AI Agent',
+  '/purchase-assistant': 'Purchase Assistant',
 }
 
 export function AppLayout({ children, toggleTheme, theme }) {
